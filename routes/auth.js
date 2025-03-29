@@ -5,6 +5,10 @@ import User from "../models/User.js";
 
 const router = express.Router();
 
+router.get('/', (req, res) => {
+  res.send("Auth routes  are working!");
+});
+
 // Signup Route
 router.post("/signup", async (req, res) => {
   try {

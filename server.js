@@ -15,8 +15,7 @@ app.use(express.json());
 app.use(cors({ origin: "*", credentials: true }));
 app.use(cookieParser());
 
-//Routes
-app.use('/api/auth', authRoutes);
+
 
 // MongoDB Connection
 mongoose
@@ -25,5 +24,8 @@ mongoose
   .catch((err) => console.log("MongoDB Connection Error:",err));
 
 app.get("/", (req, res) => res.send("API is running..."));
+
+//Routes
+app.use('/api/auth', authRoutes);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
