@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 });
 
 // Signup
-router.post("/signup", async (req, res) => {
+router.get("/signup", async (req, res) => {
   console.log("Signup API Hit!");
   try {
     const { name, email, password } = req.body;
